@@ -53762,6 +53762,7 @@ ul {
 }
 
 .cart {
+  z-index: 9999;
   top: 80px;
   right: calc((100vw - 1280px) / 2);
   width: 540px;
