@@ -91,7 +91,7 @@ $(document).ready(function() {
   
   $(window).resize(function() {
     cart.css( 'right', container.css('marginRight') );
-  }).trigger('resize');
+  }).trigger('resize').trigger('resize');
 }); //end ready
 
 function initForm() {
