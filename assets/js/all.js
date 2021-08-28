@@ -83,11 +83,7 @@ $(document).ready(function () {
   }
 
   $(window).resize(function () {
-    if (container.css('width') > '575px') {
-      cart.css('right', container.css('marginRight'));
-    } else {
-      cart.css('right', '0');
-    }
+    cart.css('right', container.css('marginRight'));
   }).trigger('resize');
 }); //end ready
 
