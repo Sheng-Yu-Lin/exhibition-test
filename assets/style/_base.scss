@@ -1,0 +1,135 @@
+html {
+  font-family: "Roboto", "Noto Sans TC", "sans-serif";
+}
+.container {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.banner {
+  height: 480px;
+  padding-left: 14.0625%;
+  background: url("../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash.jpg") no-repeat center center;
+  background-size: cover;
+  .btn {
+    width: 14.54545454545455%;
+  }
+}
+@media (max-width:575px) {
+  .banner {
+    padding-left: 15px;
+    .btn {
+      width: 45.83333333333333%;
+    }
+  }
+}
+ul {
+  list-style-type: none;
+}
+@media (min-width: 576px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width:575px) {
+  .pc {
+    display: none;
+  }
+}
+
+.cart-blank {
+  top: 80px;
+  width: calc(100vw / 2 + 100px);
+  height: calc(100vh - 80px);
+  background:#000;
+  opacity: .5;
+}
+@media (max-width:575px) {
+  .cart-blank {
+    display: none;
+  }
+}
+.cart {
+  top: 80px;
+  right: calc((100vw - 1280px) / 2);
+  width: 540px;
+  height: calc(100vh - 80px);
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .exhibition-date {
+    font-weight: 500;
+  }
+  .unit-price {
+    font-size: 20px;
+  }
+  img {
+    width: 120px;
+    height: 120px;
+  }
+  .big-number {
+    font-size: 20px;
+  }
+  .ticket-info {
+    width: 160px;
+  }
+  .del-btn {
+    top: 4px;
+    left: 4px;
+  }
+  .total-price {
+    left: 32px;
+    bottom: 31px;
+    font-size: 20px;
+  }
+  .checkout-btn {
+    right: 32px;
+    bottom: 24px;
+  }
+  .exhibition-list {
+    height: calc(100vh - 80px - 180px);
+    overflow-y: scroll;
+    scrollbar-color: #E31277 #E9ECEF;
+  }
+  .exhibition-list::-webkit-scrollbar {
+    width: 2px;
+  }
+  .exhibition-list::-webkit-scrollbar-track {
+    background: #E9ECEF;
+  }
+  .exhibition-list::-webkit-scrollbar-thumb {
+    background: #E31277;
+  }
+}
+@media (max-width:575px) {
+  .cart {
+    width: 375px;
+    height: calc(100vh - 60px);
+    top: 60px;
+    left: 0;
+    right: 0;
+    h2 {
+      font-size: 24px;
+    }
+    .exhibition-list {
+      height: calc(100vh - 60px - 68px - 96px);
+    }
+    .total-price {
+      left: 15px;
+      bottom: 35px;
+    }
+    .checkout-btn {
+      right: 15px;
+      bottom: 28px;
+    }
+  }
+}
+
+.banner, .custom-nav, .online-exhibition, .new-message-observer {
+  display: none;
+}
