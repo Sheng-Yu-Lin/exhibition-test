@@ -1,0 +1,109 @@
+.detail {
+  p {
+    font-size: 16px;
+  }
+  .exhibition-name {
+    font-size: 20px;
+  }
+  .buy-ticket > div {
+    width: 48.64864864864865%;
+    .exhibition-date-pc {
+      width: 12.03703703703704%;
+      top: 53px;
+      right: 0;
+      font-size: 20px;
+    }
+    .exhibition-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .buy-ticket > form {
+    width: 48.64864864864865%;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    .big-number {
+      font-size: 40px;
+      margin-left: 39.5px;
+      margin-right: 39.5px;
+    }
+  }
+  @media (max-width:575px) {
+    .buy-ticket > div, .buy-ticket > form {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .exhibition-date {
+      font-weight: 500;
+    }
+  }
+  .buy-ticket > form > div {
+    width: 50%;
+  }
+  @media (max-width:575px) {
+    .buy-ticket > form > div {
+      width: 100%;
+      border: none !important;
+    }
+  }
+  .buy-ticket > form > div:not(:last-of-type) {
+    height: 255px;
+  }
+  @media (max-width:575px) {
+    .buy-ticket > form > div:not(:last-of-type) {
+      height: 177.5px;
+    }
+  }
+  .buy-ticket > form > div:nth-child(2) {
+    button {
+      width: 24.07407407407407%;
+      padding-bottom: 3px;
+    }
+  }
+  .buy-ticket > form > div:last-of-type {
+    button {
+      width: 47.22222222222222%;
+      height: 44px;
+    }
+  }
+  @media (max-width:575px) {
+    .buy-ticket > form > div:last-of-type {
+      button {
+        width: 47.00854700854701%;
+      }
+    }
+  }
+
+  .​celebration {
+    img {
+      height: auto;
+    }
+    .celebration-of-style-and-art-1 {
+      width: 86.71875%;
+    }
+    .celebration-of-style-and-art-2 {
+      width: 27.34375%;
+    }
+    div {
+      width: 57.03125%;
+    }
+    .celebration-name {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .first-paragraph {
+      text-indent: 2em;
+    }
+
+    @media (max-width:575px) {
+      img, div {
+        width: 100% !important;
+      }
+    }
+  }
+}

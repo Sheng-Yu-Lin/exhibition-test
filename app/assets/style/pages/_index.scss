@@ -8,28 +8,14 @@
   .date {
     font-size: 20px;
   }
-  .banner {
-    height: 480px;
-    padding-left: 14.0625%;
-    background: url("../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash.jpg") no-repeat center center;
-    background-size: cover;
-    .btn {
-      width: 14.54545454545455%;
-    }
-  }
-  @media (max-width:575px) {
-    .banner {
-      padding-left: 15px;
-      .btn {
-        width: 45.83333333333333%;
-      }
-    }
-  }
-
+  
   .exhibition {
     .exhibition-image {
       width: 31.53153153153153%;
-      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
     @media (max-width:575px) {
       .exhibition-image {
@@ -39,7 +25,7 @@
         width: auto;
       }
     }
-
+  
     .exhibition-price, .exhibition-description, .exhibition-date-pc {
       font-size: 20px;
     }
@@ -47,8 +33,11 @@
       .exhibition-description {
         font-size: 16px;
       }
+      .btn {
+        width: 24.535%;
+      }
     }
-
+  
     @media (max-width:575px) {
       ul {
         margin-left: 0;
@@ -63,7 +52,7 @@
         width: 92%;
       }
     }
-
+  
     .exhibition-date-pc {
       top: 40px;
       right: 24px;
@@ -78,7 +67,7 @@
     }
     @media (max-width:575px) {
       .buy-ticket, .save-exhibition {
-        width: 26.135%;
+        width: 25.6%;
         bottom: 24px;
       }
     }
@@ -96,7 +85,7 @@
       }
     }
   }
-
+  
   @media (min-width: 576px) {
     .exhibition-review > div {
       background: url("../images/people2.png") no-repeat center center;
@@ -125,7 +114,7 @@
       font-size: 20px;
     }
     img {
-      width: 33.24675324675325%;
+      width: 32.24181360201511%;
       height: auto;
     }
     @media (max-width:575px) {

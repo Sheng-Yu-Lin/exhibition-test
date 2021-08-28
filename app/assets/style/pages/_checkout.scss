@@ -1,0 +1,252 @@
+.ordered {
+ .row {
+    font-size: 16px;
+    .order-status {
+      font-size: 20px;
+    }
+    .serial-number {
+      font-size: 24px;
+    }
+    a, button {
+      width: 255px;
+    }
+  }
+  .row > div {
+    width: 540px;
+  }
+  @media (max-width:575px) {
+    .row > div {
+      width:100%;
+      a, button {
+        width: 47.82608695652174%;
+      }
+      a {
+        margin-right: 4.34782608695652%;
+      }
+    }
+  }
+}
+.checkout {
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .shopping-list {
+    width: 57.03125%;
+    .step-by-step {
+      height: 0;
+      .progress {
+        height: 2px;
+      }
+      button {
+        width: 8px;
+        height: 8px;
+        top: 1px;
+        color: #000;
+        font-size: 16px;
+      }
+      .purchase-order-confirm {
+        left: 10.41095890410959%;
+      }
+      .purchase-order-confirm::after {
+        content: '確認訂單';
+        display: block;
+        position: absolute;
+        width: 64px;
+        top: 12px;
+        left: -30px;
+        right: -30px;
+      }
+      .address-info {
+        left: 36.43835616438356%;
+      }
+      .address-info::after {
+        content: '填寫訂購資訊';
+        display: block;
+        position: absolute;
+        width: 96px;
+        top: 12px;
+        left: -46px;
+        right: -46px;
+      }
+      .pay-info {
+        left: 62.46575342465753%;
+      }
+      .pay-info::after {
+        content: '填寫付款資訊';
+        display: block;
+        position: absolute;
+        width: 96px;
+        top: 12px;
+        left: -46px;
+        right: -46px;
+      }
+      .finish-order {
+        left: 88.49315068493151%;
+      }
+      .finish-order::after {
+        content: '完成訂購';
+        display: block;
+        position: absolute;
+        width: 64px;
+        top: 12px;
+        left: -30px;
+        right: -30px;
+      }
+    }
+    li {
+      margin-right: 26.02739726027397%;
+      font-size: 16px;
+      img {
+        width: 21.91780821917808%;
+        height: 84px;
+        margin-right: 4.10958904109589%;
+      }
+      .ticket-info {
+        margin-right: 8.63013698630137%;
+        .exhibition-date {
+          font-weight: 500;
+        }
+      }
+      .unit-price {
+        margin-right: 7.67123287671233%;
+      }
+      .unit-price, .amount, .edit-mode {
+        font-size: 20px;
+      }
+    }
+    @media (max-width:575px) {
+      li {
+        margin-right: 0;
+        img {
+          width: 47.82608695652174%;
+          margin-right: 4.34782608695652%;
+        }
+        .ticket-info {
+          width: 47.82608695652174%;
+          margin-right: 0;
+        }
+        .unit-price {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          margin: 0;
+        }
+        .del-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      .edit-mode {
+        display: none;
+      }
+    }
+  }
+  form {
+    width: 27.34375%;
+    font-weight: 500;
+    label, input, button {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    input {      
+      height: 38px;
+    }
+    label[for="coupon"] {
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+    }
+    @media (max-width:575px) {
+      button {
+        width: 44% !important;
+      }
+    }
+    .total-price {
+      font-size: 20px;
+    }
+    .backward-btn {
+      position: fixed;
+      left: calc((100vw - 1280px) / 2 + 85px);
+      bottom: 40px;
+      width: 160px;
+    }
+    @media (max-width:1279px) {
+      .backward-btn {
+        left: 85px;
+      }
+    }
+    @media (max-width:575px) {
+      .backward-btn, .forward-btn {
+        position: absolute;
+        bottom: 40px;
+      }
+      .backward-btn {
+        left: 4%;
+      }
+      .forward-btn {
+        right: 4%;
+      }
+    }
+  }
+  @media (max-width:575px) {
+    form {
+      width: 100% !important;
+    }
+  }
+  .purchase-order-confirm-form {
+    p, button {
+      position: fixed;
+      width: 350px;
+      left: calc(100vw / 2 + 205px);
+    }
+    p {
+      bottom: 96px;
+    }
+    button {
+      bottom: 40px;
+    }
+    @media (max-width:575px) {
+      p, button {
+        position: absolute;
+        width: 165px;
+        left: auto;
+        right: 15px;
+      }
+      p {
+        bottom: 96px;
+      }
+      button {
+        bottom: 40px;
+      }
+    }
+  }
+  .address-info-form, .pay-info-form {
+    margin-top: calc(100vh - 635px - 80px - 24px);
+  }
+  @media (max-height:715px) {
+    .address-info-form, .pay-info-form {
+      margin-top: 0;
+    }
+  }
+  @media (max-width:575px) {
+    .address-info-form, .pay-info-form {
+      margin-top: 49px;
+    }
+  }
+  @media (max-width:575px) {
+    .shopping-list, form {
+      width: 100%;
+    }
+    .shopping-list {
+      .step-by-step {
+        button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
