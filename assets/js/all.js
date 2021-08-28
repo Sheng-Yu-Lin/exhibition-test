@@ -32,6 +32,7 @@ $(document).ready(function () {
     if (cart.hasClass('d-none')) {
       cart.removeClass('d-none');
       cart_blank.removeClass('d-none');
+      cart.css('right', container.css('marginRight'));
     } else {
       cart.addClass('d-none');
       cart_blank.addClass('d-none');
