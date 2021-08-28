@@ -1,0 +1,165 @@
+---
+title: 結帳
+layout: ./app/layout.ejs
+engine: ejs
+current: checkout
+---
+<div class="ms-0 me-0 mt-0 mb-0 ps-0 pe-0 pt-0 pb-0 ordered" id="ordered">
+  <div class="row">
+    <div class="col-sm-12 col-12 ms-sm-auto me-sm-auto ps-sm-0 pe-sm-0 ps-3-7 pe-3-7 d-flex flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-check-circle text-primary mt-sm-25-5 mt-10-5 mb-2-5 px-0 w-100" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+      </svg>    
+      <p class="mb-6 px-0 w-100 text-center order-status">完成訂購</p>
+      <p class="mb-10 px-0 w-100">您的展覽憑證代碼為：</p>
+      <p class="mb-sm-12 mb-10-5 px-0 text-center serial-number text-primary w-100">qr147352</p>
+      <p class="mb-sm-24 mb-20 px-0 w-100">恭喜您已完成「2020 台味設計展」的購票手續，請於 2020/06/01 ~ 2020/10/31 於展覽入口頁面輸入「展覽憑證代碼」，經驗證無誤即可瀏覽。</p>
+      <a href="./product.html" class="btn btn-secondary me-sm-7-5 pt-2-2 pb-2-2">繼續瀏覽</a><button type="button" class="btn btn-outline-primary pt-2-2 pb-2-2">看展去</button>
+    </div>
+  </div>
+</div>
+<div class="ms-0 me-0 mt-0 mb-0 ps-0 pe-0 pt-0 pb-0 checkout" id="checkout">
+  <div class="row">
+    <div class="col-sm-12 col-12 px-0 d-flex flex-sm-wrap flex-wrap-reverse align-items-start">
+      <div class="shopping-list ms-sm-21-2 ms-3-7 me-sm-0 me-3-7 mt-sm-6 mt-6 order-sm-0 order-1">
+        <div class="position-relative w-100 step-by-step">
+          <div class="progress">
+            <div class="progress-bar w-100 bg-secondary" role="progressbar"></div>
+          </div>
+          <button type="button" class="purchase-order-confirm position-absolute translate-middle btn btn-sm btn-secondary rounded-pill px-0 py-0"></button>
+          <button type="button" class="address-info bg-white position-absolute translate-middle btn btn-sm btn-secondary rounded-pill px-0 py-0" id="step-2"></button>
+          <button type="button" class="pay-info bg-white position-absolute translate-middle btn btn-sm btn-secondary rounded-pill px-0 py-0" id="step-3"></button>
+          <button type="button" class="finish-order bg-white position-absolute translate-middle btn btn-sm btn-secondary rounded-pill px-0 py-0" id="step-4"></button>
+        </div>
+      </div>
+
+      <div class="shopping-list ms-sm-21-2 me-sm-7-5 ms-3-7 me-3-7 mt-sm-15 mt-12-2 pb-sm-0 pb-53-7 d-flex flex-wrap">
+        <ul class="w-100 px-0 mb-0">
+          <li class="mb-5 w-100 d-flex align-items-center position-relative">
+            <img src="assets/images/Designers' Exhibition-1-5.png" alt="2020 台味設計展">
+            <div class="ticket-info">
+              <p class="mt-sm-0-5 mt-0 mb-sm-1 mb-1-5 fw-bold">2020 台味設計展</p>
+              <p class="mb-sm-1 mb-1 exhibition-date">01 JUN — 31 OCT</p>
+              <p class="mb-sm-0-5 mb-0-2 text-gray">全票<span class="amount ps-1 text-black fw-bold mobile">1</span></p>
+            </div>
+            <p class="unit-price mb-0 fw-bold">NT$350</p>
+            <p class="amount fw-bold ms-sm-5 mb-0 pc readonly">1</p>
+            <div class="amount-edit me-auto edit-mode d-sm-flex flex-wrap justify-content-center align-items-center">
+              <button type="button" class="btn btn-link border-0 ps-0 pe-0 pt-0 pb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-dash d-block" viewBox="0 0 16 16">
+                  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                </svg>
+              </button>
+              <p class="fw-bold big-number ms-3 me-3 mb-0">01</p>
+              <button type="button" class="btn btn-link border-0 ps-0 pe-0 pt-0 pb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus d-block" viewBox="0 0 16 16">
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </button>
+            </div>
+            <button type="button" class="btn btn-link border-0 ps-0 pe-0 pt-0 pb-0 del-btn edit-mode">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x d-block" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button>
+          </li>
+          <li class="mb-5 w-100 d-flex align-items-center position-relative">
+            <img src="assets/images/Designers' Exhibition-2-5.png" alt="No.22 線上設計展">
+            <div class="ticket-info">
+              <p class="mt-sm-0-5 mt-0 mb-sm-1 mb-1-5 fw-bold">No.22 線上設計展</p>
+              <p class="mb-sm-1 mb-1 exhibition-date">01 JUN — 31 OCT</p>
+              <p class="mb-sm-0-5 mb-0-2 text-gray">全票<span class="amount ps-1 text-black fw-bold mobile">1</span></p>
+            </div>
+            <p class="unit-price mb-0 fw-bold">NT$350</p>
+            <p class="amount fw-bold ms-sm-5 mb-0 pc readonly">1</p>
+            <div class="amount-edit me-auto edit-mode d-sm-flex flex-wrap justify-content-center align-items-center">
+              <button type="button" class="btn btn-link border-0 ps-0 pe-0 pt-0 pb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-dash d-block" viewBox="0 0 16 16">
+                  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                </svg>
+              </button>
+              <p class="fw-bold big-number ms-3 me-3 mb-0">01</p>
+              <button type="button" class="btn btn-link border-0 ps-0 pe-0 pt-0 pb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus d-block" viewBox="0 0 16 16">
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </button>
+            </div>
+            <button type="button" class="btn btn-link border-0 ps-0 pe-0 pt-0 pb-0 del-btn edit-mode">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x d-block" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button>
+          </li>
+          <li class="mb-5 w-100 d-flex align-items-center position-relative">
+            <img src="assets/images/Designers' Exhibition-3-5.png" alt="高雄設計節">
+            <div class="ticket-info">
+              <p class="mt-sm-0-5 mt-0 mb-sm-1 mb-1-5 fw-bold">高雄設計節</p>
+              <p class="mb-sm-1 mb-1 exhibition-date">01 JUN — 31 OCT</p>
+              <p class="mb-sm-0-5 mb-0-2 text-gray">全票<span class="amount ps-1 text-black fw-bold mobile">1</span></p>
+            </div>
+            <p class="unit-price mb-0 fw-bold">NT$350</p>
+            <p class="amount fw-bold ms-sm-5 mb-0 pc readonly">1</p>
+            <div class="amount-edit me-auto edit-mode d-sm-flex flex-wrap justify-content-center align-items-center">
+              <button type="button" class="btn btn-link border-0 ps-0 pe-0 pt-0 pb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-dash d-block" viewBox="0 0 16 16">
+                  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                </svg>
+              </button>
+              <p class="fw-bold big-number ms-3 me-3 mb-0">01</p>
+              <button type="button" class="btn btn-link border-0 ps-0 pe-0 pt-0 pb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus d-block" viewBox="0 0 16 16">
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </button>
+            </div>
+            <button type="button" class="btn btn-link border-0 ps-0 pe-0 pt-0 pb-0 del-btn edit-mode">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x d-block" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <form class="me-sm-21-2 mt-sm-21 mt-auto mb-sm-10 purchase-order-confirm-form" id="purchase-order-confirm-form">
+        <p class="mb-0">小計<span class="position-absolute end-0">NT$1050</span></p>
+        <button type="button" class="btn btn-secondary pt-2-2 pb-2-2">下一步</button>
+      </form>
+      <form class="ms-sm-0 ms-3-7 me-sm-21-2 me-3-7 mb-sm-0 mb-6 address-info-form" id="address-info-form">
+        <h2 class="mb-sm-5">訂購人資訊</h2>
+        <label for="e-mail" class="form-label mb-sm-1">Email</label>
+        <input type="text" id="e-mail" class="form-control mb-sm-5 pt-1-7 pb-1-7" placeholder="example@gmail.com">
+        <label for="name" class="form-label mb-sm-1">姓名</label>
+        <input type="text" id="name" class="form-control mb-sm-5 pt-1-7 pb-1-7" placeholder="請輸入姓名">
+        <label for="tel" class="form-label mb-sm-1">聯絡電話</label>
+        <input type="text" id="tel" class="form-control mb-sm-5 pt-1-7 pb-1-7" placeholder="請輸入電話">
+        <label for="coupon" class="form-label mb-sm-1">優惠碼</label>
+        <input type="text" id="coupon" class="form-control mb-sm-1 pt-1-7 pb-1-7" placeholder="TG87526">
+        <label for="coupon" class="form-label d-block text-end text-primary mb-sm-14">優惠碼已生效</label>
+        <p class="w-100 position-relative mb-1-5">小計<span class="position-absolute fw-light end-0">NT$1050</span></p>
+        <p class="w-100 position-relative mb-1-5">折扣<span class="position-absolute fw-light end-0">-NT$50</span></p>
+        <p class="w-100 position-relative mb-sm-3 mb-0 total-price">總金額<span class="position-absolute end-0">NT$1000</span></p>
+        <button type="button" class="btn btn-secondary pt-2-2 pb-2-2 mb-sm-10 forward-btn">下一步</button><button type="button" class="btn btn-outline-primary pt-2-2 pb-2-2 backward-btn">返回</button>
+      </form>
+      <form class="ms-sm-0 ms-3-7 me-sm-21-2 me-3-7 mb-sm-0 mb-6 pay-info-form" id="pay-info-form">
+        <h2 class="mb-sm-5">付款資訊</h2>
+        <label for="credit-card" class="form-label mb-sm-1">信用卡帳號</label>
+        <input type="text" id="credit-card" class="form-control mb-sm-5 pt-1-7 pb-1-7" placeholder="Xxxx-xxxx-xxxx-xxxx">
+        <label for="effective-date" class="form-label mb-sm-1">有效日期</label>
+        <input type="text" id="effective-date" class="form-control mb-sm-5 pt-1-7 pb-1-7" placeholder="(MM/YY)">
+        <label for="card-security-code" class="form-label mb-sm-1">安全碼</label>
+        <input type="text" id="card-security-code" class="form-control mb-sm-41-2 pt-1-7 pb-1-7" placeholder="***">
+        <p class="w-100 position-relative mb-1-5">小計<span class="position-absolute fw-light end-0">NT$1050</span></p>
+        <p class="w-100 position-relative mb-1-5">折扣<span class="position-absolute fw-light end-0">-NT$50</span></p>
+        <p class="w-100 position-relative mb-sm-3 mb-0 total-price">總金額<span class="position-absolute end-0">NT$1000</span></p>
+        <button type="button" class="btn btn-secondary pt-2-2 pb-2-2 mb-sm-10 forward-btn">下一步</button><button type="button" class="btn btn-outline-primary pt-2-2 pb-2-2 backward-btn">返回</button>
+      </form>
+    </div>
+  </div>
+</div>
+<style>
+footer {
+  display: none !important;
+}
+</style>
