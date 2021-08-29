@@ -23,6 +23,9 @@ header {
 }
 @media (max-width:575px) {
   header {
+    h1 {
+      line-height: 1.2;
+    }
     ul {
       top: 18px;
       right: 26px;
