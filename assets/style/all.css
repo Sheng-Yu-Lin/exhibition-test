@@ -53706,6 +53706,10 @@ html {
   font-family: "Roboto", "Noto Sans TC", "sans-serif";
 }
 
+h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3, h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .h6, p, span {
+  line-height: 1.5;
+}
+
 .container .row {
   margin-left: 0;
   margin-right: 0;
@@ -53844,15 +53848,16 @@ ul {
     font-size: 24px;
   }
   .cart .exhibition-list {
-    height: calc(100vh - 60px - 68px - 96px);
+    height: 416px;
   }
   .cart .total-price {
     left: 15px;
-    bottom: 35px;
+    top: 516px;
   }
   .cart .checkout-btn {
     right: 15px;
-    bottom: 28px;
+    top: 508px;
+    bottom: auto;
   }
 }
 
